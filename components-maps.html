@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Geominr</title>
+        <!-- Favicons-->
+        <link rel="shortcut icon" href="assets/images/geominr_globe.png">
+        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+        <!-- Web Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <!-- Plugins-->
+        <link href="assets/css/plugins.min.css" rel="stylesheet">
+        <!-- Template core CSS-->
+        <link href="assets/css/template.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Preloader-->
+        <div class="page-loader">
+            <div class="page-loader-inner">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Preloader end-->
+
+        <!-- Header-->
+        <header class="header">
+            <div class="container-fluid">
+                <!-- Brand-->
+                <div class="inner-header">
+                    <a class="inner-brand" href="index.html">
+                        <img src="assets/images/geominer_logo.png" height="140" width="150">
+                    </a>
+                </div>
+                <!-- Navigation-->
+                <div class="inner-navigation collapse">
+                    <div class="inner-nav">
+                        <ul>
+                            <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">Services</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html#strategy">Data Strategy and Research</a></li>
+                                    <li><a href="index.html#viz-design">Visualization and Design</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">Projects</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Mapping America's Lead Pipes</a></li>
+                                    <li><a href="index.html">Census for a Cause</a></li>
+                                    <li><a href="index.html">MOIRA Analytics</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="components-maps.html"><span class="menu-item-span">Geominr Lab</span></a></li>
+                            <li><a href="index.html#team"><span class="menu-item-span">About</span></a></li>
+                            <li><a href="index.html#contact"><span class="menu-item-span">Contact</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header end-->
+
+        <!-- Wrapper-->
+        <div class="wrapper">
+            <!-- Page Header-->
+            <section class="module-page-title bg-gray">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="page-title-desc">
+                                <h1 class="page-title-heading">Geominr Lab is under development!</h1>
+                                <!--p This theme will shake your world.-->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Geominr Lab</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Page Header end-->
+
+            <!-- Maps Widgets-->
+            <!--
+            <section class="module">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            
+                            
+                            <table style="width:100%">
+                                <tr>
+                                    <td>Year Range:</td>
+                                    <td>
+                                        <input type="number" name="year-1" min="1950" max="2017">
+                                        <p style="display:inline">to</p>
+                                        <input type="number" name="year-2" min="1950" max="2017">
+                                    </td>
+                                </tr>    
+                                <tr>
+                                    <td>Cause of Death:</td>
+                                    <td>
+                                        <select>
+                                            <option value="heart-disease">Heart Disease</option>
+                                            <option value="lung-cancer">Lung Cancer</option>
+                                            <option value="breast-cancer">Breast Cancer</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>State:</td>
+                                    <td>
+                                        <select>
+                                                <option value="*">All States</option>
+                                                <option value="Alabama">Alabama</option>
+                                                <option value="Alaska">Alaska</option>
+                                                <option value="Arizona">Arizona</option>
+                                                <option value="Arkansas">Arkansas</option>
+                                                <option value="California">California</option>
+                                                <option value="Colorado">Colorado</option>
+                                                <option value="Connecticut">Connecticut</option>
+                                                <option value="Delaware">Delaware</option>
+                                                <option value="District of Columbia">District of Columbia</option>
+                                                <option value="Florida">Florida</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Guam">Guam</option><option value="Hawaii">Hawaii</option>
+                                                <option value="Idaho">Idaho</option>
+                                                <option value="Illinois">Illinois</option>
+                                                <option value="Indiana">Indiana</option>
+                                                <option value="Iowa">Iowa</option>
+                                                <option value="Kansas">Kansas</option>
+                                                <option value="Kentucky">Kentucky</option>
+                                                <option value="Louisiana">Louisiana</option>
+                                                <option value="Maine">Maine</option>
+                                                <option value="Maryland">Maryland</option>
+                                                <option value="Massachusetts">Massachusetts</option>
+                                                <option value="Michigan">Michigan</option>
+                                                <option value="Minnesota">Minnesota</option>
+                                                <option value="Mississippi">Mississippi</option>
+                                                <option value="Missouri">Missouri</option>
+                                                <option value="Montana">Montana</option>
+                                                <option value="Nebraska">Nebraska</option>
+                                                <option value="Nevada">Nevada</option>
+                                                <option value="New Hampshire">New Hampshire</option>
+                                                <option value="New Jersey">New Jersey</option>
+                                                <option value="New Mexico">New Mexico</option>
+                                                <option value="New York">New York</option>
+                                                <option value="North Carolina">North Carolina</option>
+                                                <option value="North Dakota">North Dakota</option>
+                                                <option value="Northern Marianas Islands">Northern Marianas Islands</option>
+                                                <option value="Ohio">Ohio</option>
+                                                <option value="Oklahoma">Oklahoma</option>
+                                                <option value="Oregon">Oregon</option>
+                                                <option value="Pennsylvania">Pennsylvania</option>
+                                                <option value="Puerto Rico">Puerto Rico</option>
+                                                <option value="Rhode Island">Rhode Island</option>
+                                                <option value="South Carolina">South Carolina</option>
+                                                <option value="South Dakota">South Dakota</option>
+                                                <option value="Tennessee">Tennessee</option>
+                                                <option value="Texas">Texas</option>
+                                                <option value="Utah">Utah</option>
+                                                <option value="Vermont">Vermont</option>
+                                                <option value="Virginia">Virginia</option>
+                                                <option value="Virgin Islands">Virgin Islands</option>
+                                                <option value="Washington">Washington</option>
+                                                <option value="West Virginia">West Virginia</option>
+                                                <option value="Wisconsin">Wisconsin</option>
+                                                <option value="Wyoming">Wyoming</option>
+                                            
+                                            </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Counties:</td>
+                                    <td>
+                                        <select>
+                                            <option value="all-county">All</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Race:</td>
+                                    <td>
+                                        <select>
+                                            <option value="all-race">All</option>
+                                            <option value="white">White</option>
+                                            <option value="black">Black</option>
+                                            <option value="hispanic">Hispanic</option>
+                                            <option value="native">Am. Indian or AK. Native</option>
+                                            <option value="asian">Asian or Pac. Islander</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Age Groups:</td>
+                                    <td>
+                                        <select>
+                                            <option value="all-age">All</option>
+                                            <option value="4">0 - 4</option>
+                                            <option value="9">5 - 9</option>
+                                            <option value="14">10 - 14</option>
+                                            <option value="19">15 - 19</option>
+                                            <option value="24">20 - 24</option>
+                                            <option value="34">25 - 34</option>
+                                            <option value="44">35 - 44</option>
+                                            <option value="54">45 - 54</option>
+                                            <option value="64">55 - 64</option>
+                                            <option value="74">65 - 74</option>
+                                            <option value="84">75 - 84</option>
+                                            <option value="85">85+</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rate per:</td>
+                                    <td>
+                                        <select>
+                                            <option value="1000">1,000</option>
+                                            <option value="100000">100,000</option>
+                                        </select>
+                                        <p style="display:inline">Age Adjusted: </p>
+                                        <input type="checkbox">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-8">
+                            <svg height="100%" width="100%"><circle cx="50" cy="50", r="40"></circle></svg>
+                            
+                            <script>
+                                
+                                var url = "https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/us.json"
+                                
+                                const svg = d3.select('svg');
+                                const projection = d3.geoNaturalEarth1();
+                                const pathGenerator = d3.geoPath().projection(projection);
+                                us = d3.json(url)
+                                console.log(us)
+                                svg.append("g")
+                                    .selectAll("path")
+                                    .data(topojson.feature(us, us.objects['counties']).features)
+                                    .join("path");
+                                
+                                
+                                //console.log(us)
+                                
+                                
+                            </script>
+                                <!--
+                                <script>
+                                d3 = require("d3@5")
+                                topojson = require("topojson-client@3")
+                                us = d3.json("https://cdn.jsdelivr.net/npm/us-atlas@2/us/10m.json")
+                                
+                                chart = {
+                                    
+                                    const path = d3.geoPath();
+                                    
+                                    const svg = d3.create("svg")
+                                        .attr("viewBox", "0 0 960 600")
+                                        .style("width", "100%")
+                                        .style("height", "auto");
+                                    
+                                    svg.append("g")
+                                        .selectAll("path")
+                                        .data(topojson.feature(us, us.objects.counties).features)
+                                        .join("path")
+                                    
+                                    
+                                    
+                                    return svg.node();
+                                }
+                                </script> --****>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab-1-1">
+                                        <h6>Table</h6></a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab-1-2">
+                                        <h6>Reference</h6></a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="tab-1-1">
+                                    
+                                </div>
+                                <div class="tab-pane" id="tab-1-2">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section> -->
+            <!-- Maps Widgets end-->
+            <!-- Footer-->
+            <footer class="footer">
+                <div class="footer-widgets">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8" id="contact">
+                                <!-- Text widget-->
+                                <aside class="widget widget-text">
+                                    <div class="widget-title">
+                                        <h6>Contact Us at <a href="mailto:info@geominr.com">info@geominr.com</a>:</h6>
+                                    </div>
+                                    <form>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-sml" type="name" placeholder="Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-sm" type="name" placeholder="Organization">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-sm" type="name" placeholder="Subject">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control form-control-sm" type="email" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" value="Send">
+                                        </div>
+                                        
+                                    </form>
+                                </aside>
+                            </div>
+                            <div class="col-md-3">
+                                <!-- Recent entries widget-->
+                                <aside class="widget widget-recent-entries">
+                                    <div class="widget-title">
+                                        <h6>Recent News</h6>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">EcoCity World Summit 2019: How Machine Learning Can Help Solve America's Lead Crisis</a><span class="post-date">October 7, 2019</span></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>© 2019 Geominr, LLC. All Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer end-->
+        </div>
+        <!-- Wrapper end-->
+
+        <!-- To top button--><a class="scroll-top" href="#top"><i class="fas fa-angle-up"></i></a>
+
+        <!-- Scripts-->
+        <script src="assets/js/custom/jquery-3.2.1.min.js"></script>
+        <script src="assets/js/custom/popper.min.js"></script>
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q"></script>
+        <script src="assets/js/custom/plugins.min.js"></script>
+        <script src="assets/js/custom/custom.min.js"></script>
+    </body>
+</html>

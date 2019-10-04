@@ -18,6 +18,11 @@
         <link href="assets/css/plugins.min.css" rel="stylesheet">
         <!-- Template core CSS-->
         <link href="assets/css/template.css" rel="stylesheet">
+        
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     </head>
     <body>
 
@@ -42,6 +47,7 @@
                     </a>
                 </div>
                 <!-- Navigation-->
+                
                 <div class="inner-navigation collapse">
                     <div class="inner-nav">
                         <ul>
@@ -64,6 +70,13 @@
                         </ul>
                     </div>
                 </div>
+                <div class="extra-nav">
+                    <ul>
+                        <li><a class="off-canvas-open" href="#"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+                        <li class="nav-toggle"><a href="#" data-toggle="collapse" data-target=".inner-navigation"><span class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+                    </ul>
+                </div>
+                
             </div>
         </header>
         <!-- Header end-->
@@ -71,13 +84,82 @@
         <!-- Wrapper-->
         <div class="wrapper">
             <!-- Hero-->
-            <section class="module-cover parallax text-center" data-background="assets/images/Open-Data-image.jpg" data-overlay="0.1">
-                <div class="container">
+            <section class="module parallax" data-background="assets/images/billboard.jpg">
+                <div class="container" style="height: auto">
                     <div class="row">
-                        <div class="col-md-8">
-                            <h2>Get the Most Out of Open Data for Your Organization</h2>
-                            <p></p>
+                        <div class="col-md-4">
+                            <h4>Seeking Global Perspectives on Open Data</h4>
+                            <p>We are asking changemakers around the world how they use Open Data. Here's what they're saying.</p>
+                            <center><a class="btn btn-brand" target="_blank" href="https://forms.gle/mdb31SfuMJ1b9Vx67">Take the Survey</a></center>
+                                
+                                    
                         </div>
+                        <div class="col-md-8">
+                            <div style="z-index: 1;">
+                            <svg id="my_dataviz" width="600" height="300">
+                                <script>
+                                // The svg
+                                var svg = d3.select("svg"),
+                                    width = +svg.attr("width"),
+                                    height = +svg.attr("height");
+
+                                // Map and projection
+                                var projection = d3.geoNaturalEarth()
+                                    .scale(width / 1.5 / Math.PI)
+                                    .center([0,20])
+                                    .translate([width / 2, height / 2.4])
+
+                                // Load external data and boot
+                                d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson", function(data){
+
+                                    // Draw the map
+                                    svg.append("g")
+                                        .selectAll("path")
+                                        .data(data.features)
+                                        .enter().append("path")
+                                            .attr("fill", "#69b3a2")
+                                            .attr("d", d3.geoPath()
+                                                .projection(projection)
+                                            )
+                                            .style("stroke", "#fff")
+                                        //.on('mouseover',d3.select(this).style('fill-opacity': 0.85));
+                                        //.on('mouseout', handleMouseOut);
+                                    console.log(data);
+                                })
+                                
+                                
+                                </script>
+                            </svg>
+                        </div>
+                            <div style="z-index: 2; position: absolute; top: 0px; left: 0px; background-position:100px 200px; background-color: rgba(0, 51, 102, 0.4)" class="review-slides owl-carousel">
+                                        <div class="review">
+                                            <div class="review-content">
+                                                <blockquote>
+                                                    <p>Open Data is essential to fact-based policymaking.</p>
+                                                    <footer class="blockquote-footer">Representative Doe</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="review">
+                                            <div class="review-content">
+                                                <blockquote>
+                                                    <p>I use Open Data to better understand my community's needs.</p>
+                                                    <footer class="blockquote-footer">Local Non-Profit Leader</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                        <div class="review">
+                                            <div class="review-content">
+                                                <blockquote>
+                                                    <p>Without Open Data, the world would be far behind where it is now.</p>
+                                                    <footer class="blockquote-footer">Buddha</footer>
+                                                </blockquote>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -153,8 +235,73 @@
                 </div>
                 
             </section>
+            <!--
+            <section class="module parallax" data-background="assets/images/module-15.jpg" data-overlay="0.5">
+                <div class="container" id="advisory board">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-9 m-auto text-center">
+                            <h2>Partners and Advisors</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="assets/images/Pyne_Saumyadipta.jpg">
+                                    <a href="assets/resume.pdf" target="_blank" download><small>Download Resume</small></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Dr. Saumyadipta Pyne, PhD</h4>
+                                    <h6><b>Scientific Advisor</b></h6>
+                                    <p>Dr. Pyne is the scientific director of the Public Health Dynamics Lab at the University of Pittsburgh Graduate School of Public Health</p>
+                                    
+                                </div>
+                                 <div class="col-md-4">
+                                    <img src="assets/images/pierre-goov.jpg">
+                                    <a href="assets/resume.pdf" target="_blank" download><small>Download Resume</small></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Pierre Goovaerts</h4>
+                                    <h6><b>Scientific Advisor</b></h6>
+                                    <p>Dr. Goovaerts is the Cheif Scientist at BioMedware and a distinguished scholar in the field of geostatistics and </p>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="assets/images/denice-ross.jpg">
+                                    <a href="assets/resume.pdf" target="_blank" download><small>Download Resume</small></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Denice Ross</h4>
+                                    <h6><b>Data and Policy Advisor</b></h6>
+                                    <p>Denice Ross is a Fellow in Residence at the Beeck Center for Social Impact + Innovation. Her career has been defined by acheivements in data governance and policy in the White House Office of Budget and Management and as Data Strategy Lead for the Phase Zero Project at New America.</p>
+                                    
+                                </div>
+                                 <div class="col-md-4">
+                                    <img src="assets/images/headshot-white-background.png">
+                                    <a href="assets/resume.pdf" target="_blank" download><small>Download Resume</small></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Raanan Gurewitsch</h4>
+                                    <h6><b>Founder and President</b></h6>
+                                    <p>Raanan is a civic technologist with professional experience in in a range of technical roles across public, private and academic sectors. His experience in the public sector includes large scale data collection projects for the City of Pittsburgh and the United States Census Bureau.</p>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </section> -->
             <!-- Section end-->
-<!-- Footer-->
+            <!-- Footer-->
             <footer class="footer">
                 <div class="footer-widgets">
                     <div class="container">
@@ -217,30 +364,31 @@
             <!-- Footer end-->
         </div>
         <!-- Wrapper end-->
-        <!-- Off canvas-->
-        <div class="off-canvas-sidebar">
+    <!-- Off canvas-->
+        <div class="off-canvas-sidebar" width="400">
             <div class="off-canvas-sidebar-wrapper">
                 <div class="off-canvas-header"><a class="off-canvas-close" href="#"><span class="ti-close"></span></a></div>
                 <div class="off-canvas-content">
-                    <!-- Text widget-->
-                    <aside class="widget widget-text">
-                        <div class="textwidget">
-                            <p class="text-center"><img src="assets/images/logo-light-2.png" alt="" width="80px"></p>
-                            <p class="text-center">See how users experience your website in realtime to see changes.</p>
-                        </div>
-                    </aside>
                     <!-- Recent portfolio widget-->
                     <aside class="widget widget-recent-works">
                         <ul>
-                            <li><a href="#"><img src="assets/images/widgets/1.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/2.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/3.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/4.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/5.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/6.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/7.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/8.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="assets/images/widgets/9.jpg" alt=""></a></li>
+                            <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">Services</span></a>
+                                <!--
+                                <ul class="sub-menu">
+                                    <li><a href="index.html#strategy">Data Strategy and Research</a></li>
+                                    <li><a href="index.html#viz-design">Visualization and Design</a></li>
+                                </ul> -->
+                            </li>
+                            <li class="menu-item-has-children"><a href="#"><span class="menu-item-span">Projects</span></a><!--
+                                <ul class="sub-menu">
+                                    <li><a href="index.html">Mapping America's Lead Pipes</a></li>
+                                    <li><a href="index.html">Census for a Cause</a></li>
+                                    <li><a href="index.html">MOIRA Analytics</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a href="components-maps.html"><span class="menu-item-span">Geominr Lab</span></a></li>
+                            <li><a href="index.html#team"><span class="menu-item-span">About</span></a></li>
+                            <li><a href="index.html#contact"><span class="menu-item-span">Contact</span></a></li>
                         </ul>
                     </aside>
                     <!-- Social Icons-->

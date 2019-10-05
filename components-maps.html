@@ -22,6 +22,8 @@
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v5.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <!--spin.js-->
+    <link href="./assets/css/spin.css" rel="stylesheet">
 
     <!-- d3 styles -->
     <style>
@@ -38,7 +40,7 @@
         div.tooltip {
             position: absolute;
             text-align: center;
-            max-width: 100px;
+            max-width: 10em;
             padding: 0.5em;
             font: 1em sans-serif;
             background: rgb(53, 53, 53);
@@ -166,8 +168,8 @@
                                     <option>2005</option>
                                 </select>
                                 <hr />
-                                <h7>Source: <a
-                                        href="http://thematicmapping.org/downloads/world_borders.php">thematicmapping</a>
+                                <h7>Source: <a target="_blank" href="https://population.un.org/wpp/">U.N. World
+                                        Population Prospects</a>
                                 </h7>
                             </div>
                             <div class="tab-pane" id="tab-1-2">
@@ -186,11 +188,16 @@
                                     <option>2016</option>
                                     <option>2015</option>
                                 </select>
+                                <hr />
+                                <h7>Source: U.S.
+                                    Census Bureau <a target="_blank"
+                                        href="https://www.census.gov/programs-surveys/acs">American Community Survey
+                                        (ACS)</a>
+                                </h7>
                             </div>
-
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8" id="data-view">
                         <svg id="world-map" width="600" height="400"></svg>
 
                     </div>
@@ -305,17 +312,16 @@
 
     <a class="scroll-top" href="#top"><i class="fas fa-angle-up"></i></a>
 
-    <!-- Scripts-->
-    <script src="./assets/js/citysdk.js"></script>
-    <script src="./assets/js/legend.js"></script>
-    <script src="./assets/js/lab.js"></script>
-    <script src="./assets/js/custom/jquery-3.2.1.min.js"></script>
-    <script src="./assets/js/custom/popper.min.js"></script>
-    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
-    <script src="./assets/js/custom/plugins.min.js"></script>
-    <script src="./assets/js/custom/custom.min.js"></script>
-
-
 </body>
+<!-- Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+<script src="./assets/js/citysdk.js"></script>
+<script src="./assets/js/legend.js"></script>
+<script src="./assets/js/lab.js"></script>
+<script src="./assets/js/custom/jquery-3.2.1.min.js"></script>
+<script src="./assets/js/custom/popper.min.js"></script>
+<script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+<script src="./assets/js/custom/plugins.min.js"></script>
+<script src="./assets/js/custom/custom.min.js"></script>
 
 </html>
